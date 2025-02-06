@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - Blue Ocean Offshore Bank</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+      color: #333;
+    }
+    header {
+      background: #003366;
+      color: #fff;
+      padding: 20px 40px;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    .navbar ul li {
+      margin-left: 20px;
+    }
+    .navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .btn-logout {
+      background: #e60000;
+      border: none;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .container {
+      padding: 40px;
+    }
+    .overview {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .overview h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    .overview p {
+      font-size: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background: #003366;
+      color: #fff;
+    }
+    .transfer-form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      margin-bottom: 30px;
+    }
+    .transfer-form input[type="text"],
+    .transfer-form input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .transfer-form input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background: #003366;
+      border: none;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .transfer-form input[type="submit"]:hover {
+      background: #002244;
+    }
+    footer {
+      background: #003366;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1>Blue Ocean Offshore Bank</h1>
+      <ul>
+        <!-- Home now links to the dashboard page -->
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="#transactions">Transactions</a></li>
+        <li><a href="#support">Support</a></li>
+        <li><a class="btn-logout" href="index.html">Logout</a></li>
+      </ul>
+    </div>
+  </header>
+  <div class="container">
+    <div class="overview">
+      <h2>Account Overview</h2>
+      <!-- Displaying the account holder's name -->
+      <p><strong>Account Holder:</strong> Mark Anderson</p>
+      <p><strong>Current Balance:</strong> $25,000,650</p>
+    </div>
+    
+    <h3 id="transactions">Transaction History - Payments Received (2017 - 2025)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>March 15, 2017</td>
+          <td>Payment for construction materials in the U.S.</td>
+          <td>$120,000</td>
+        </tr>
+        <tr>
+          <td>July 3, 2017</td>
+          <td>Engineering consultancy fees in Turkey</td>
+          <td>$80,500</td>
+        </tr>
+        <tr>
+          <td>November 22, 2018</td>
+          <td>Equipment purchase for a construction site in the U.S.</td>
+          <td>$250,000</td>
+        </tr>
+        <tr>
+          <td>April 10, 2019</td>
+          <td>Contract payment for civil engineering project in Turkey</td>
+          <td>$500,000</td>
+        </tr>
+        <tr>
+          <td>September 5, 2019</td>
+          <td>Design services for a skyscraper project in the U.S.</td>
+          <td>$300,000</td>
+        </tr>
+        <tr>
+          <td>February 14, 2020</td>
+          <td>Land acquisition for a development project in Turkey</td>
+          <td>$2,500,000</td>
+        </tr>
+        <tr>
+          <td>June 25, 2020</td>
+          <td>Salary payment to construction staff in the U.S.</td>
+          <td>$150,000</td>
+        </tr>
+        <tr>
+          <td>October 30, 2021</td>
+          <td>Infrastructure investment in Turkey</td>
+          <td>$1,200,000</td>
+        </tr>
+        <tr>
+          <td>May 18, 2022</td>
+          <td>Renovation project expenses in the U.S.</td>
+          <td>$600,000</td>
+        </tr>
+        <tr>
+          <td>December 9, 2022</td>
+          <td>Contract payment for bridge construction in Turkey</td>
+          <td>$800,000</td>
+        </tr>
+        <tr>
+          <td>March 20, 2023</td>
+          <td>Purchase of heavy machinery in the U.S.</td>
+          <td>$2,000,000</td>
+        </tr>
+        <tr>
+          <td>July 11, 2023</td>
+          <td>Site development expenses in Turkey</td>
+          <td>$500,000</td>
+        </tr>
+        <tr>
+          <td>October 8, 2023</td>
+          <td>Consulting fees for real estate projects in the U.S.</td>
+          <td>$350,000</td>
+        </tr>
+        <tr>
+          <td>January 17, 2024</td>
+          <td>Payment for raw materials in Turkey</td>
+          <td>$400,000</td>
+        </tr>
+        <tr>
+          <td>April 29, 2024</td>
+          <td>Labor and equipment costs for a high-rise project in the U.S.</td>
+          <td>$750,000</td>
+        </tr>
+        <tr>
+          <td>August 14, 2024</td>
+          <td>New project investment in Turkey</td>
+          <td>$1,500,000</td>
+        </tr>
+        <tr>
+          <td>November 6, 2024</td>
+          <td>Engineering research and development funding in the U.S.</td>
+          <td>$200,000</td>
+        </tr>
+        <tr>
+          <td>January 30, 2025</td>
+          <td>Final settlement for construction services in Turkey</td>
+          <td>$2,100,000</td>
+        </tr>
+        <tr>
+          <td>April 5, 2025</td>
+          <td>Commercial property purchase in the U.S.</td>
+          <td>$3,000,000</td>
+        </tr>
+        <tr>
+          <td>June 20, 2025</td>
+          <td>Final balance adjustment and interest earnings</td>
+          <!-- Updated to ensure the total balance is $25,000,650 -->
+          <td>$7,700,150</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3 id="support">Make a Transfer</h3>
+    <div class="transfer-form">
+      <form id="transferForm">
+        <label for="recipient">Recipient Account:</label>
+        <input type="text" id="recipient" placeholder="Enter recipient account" required>
+        <label for="transferAmount">Amount:</label>
+        <input type="number" id="transferAmount" placeholder="Enter amount" required>
+        <input type="submit" value="Transfer">
+      </form>
+      <p id="transferMessage" style="color: red; text-align: center;"></p>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2023 Blue Ocean Offshore Bank | 123 Ocean Drive, Suite 456 | Phone: (123) 456-7890</p>
+  </footer>
+  <script>
+    document.getElementById('transferForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('transferMessage').textContent = "Transfers are currently disabled due to restrictions.";
+    });
+  </script>
+</body>
+</html>
