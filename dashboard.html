@@ -6,26 +6,28 @@
   <title>Dashboard - Blue Ocean Offshore Bank</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   <style>
+    /* Professional background image – replace the URL with one of your choice */
     body {
-      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f2f2f2;
+      font-family: 'Roboto', sans-serif;
+      background: url('https://via.placeholder.com/1600x900?text=Banking+Background') no-repeat center center/cover;
       color: #333;
     }
     header {
-      background: #003366;
-      color: #fff;
+      background: rgba(0, 0, 0, 0.7);
       padding: 20px 40px;
+      color: #fff;
     }
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
     .navbar h1 {
       margin: 0;
-      font-size: 24px;
+      font-size: 26px;
     }
     .navbar ul {
       list-style: none;
@@ -53,6 +55,10 @@
     }
     .container {
       padding: 40px;
+      background: rgba(255,255,255,0.9);
+      margin: 40px auto;
+      max-width: 1200px;
+      border-radius: 8px;
     }
     .overview {
       text-align: center;
@@ -80,7 +86,7 @@
       color: #fff;
     }
     .transfer-form {
-      background: #fff;
+      background: #f5f5f5;
       padding: 20px;
       border-radius: 5px;
       box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -109,13 +115,10 @@
       background: #002244;
     }
     footer {
-      background: #003366;
+      background: rgba(0, 0, 0, 0.7);
       color: #fff;
       text-align: center;
-      padding: 15px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      padding: 15px 40px;
       font-size: 14px;
     }
   </style>
@@ -125,7 +128,6 @@
     <div class="navbar">
       <h1>Blue Ocean Offshore Bank</h1>
       <ul>
-        <!-- Home now links to the dashboard page -->
         <li><a href="dashboard.html">Home</a></li>
         <li><a href="#transactions">Transactions</a></li>
         <li><a href="#support">Support</a></li>
@@ -133,10 +135,10 @@
       </ul>
     </div>
   </header>
+  
   <div class="container">
     <div class="overview">
       <h2>Account Overview</h2>
-      <!-- Displaying the account holder's name -->
       <p><strong>Account Holder:</strong> Mark Anderson</p>
       <p><strong>Current Balance:</strong> $25,000,650</p>
     </div>
@@ -249,7 +251,6 @@
         <tr>
           <td>June 20, 2025</td>
           <td>Final balance adjustment and interest earnings</td>
-          <!-- Updated to ensure the total balance is $25,000,650 -->
           <td>$7,700,150</td>
         </tr>
       </tbody>
@@ -267,9 +268,11 @@
       <p id="transferMessage" style="color: red; text-align: center;"></p>
     </div>
   </div>
+  
   <footer>
-    <p>&copy; 2023 Blue Ocean Offshore Bank | 123 Ocean Drive, Suite 456 | Phone: (123) 456-7890</p>
+    <p>&copy; 2025 Blue Ocean Offshore Bank | 123 Ocean Drive, Suite 456 | Phone: (123) 456-7890</p>
   </footer>
+  
   <script>
     document.getElementById('transferForm').addEventListener('submit', function(e) {
       e.preventDefault();
