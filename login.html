@@ -6,26 +6,28 @@
   <title>Login - Blue Ocean Offshore Bank</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   <style>
+    /* Subtle patterned gradient background */
     body {
-      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f2f2f2;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(145deg, #e0eafc, #cfdef3);
       color: #333;
     }
     header {
       background: #003366;
-      color: #fff;
       padding: 20px 40px;
+      color: #fff;
     }
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
     .navbar h1 {
       margin: 0;
-      font-size: 24px;
+      font-size: 26px;
     }
     .navbar ul {
       list-style: none;
@@ -42,22 +44,23 @@
       font-weight: 700;
     }
     .login-container {
-      width: 350px;
+      width: 360px;
       margin: 80px auto;
       background: #fff;
-      padding: 30px;
-      border-radius: 5px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
     .login-container h2 {
       text-align: center;
       margin-bottom: 20px;
+      color: #003366;
     }
     .login-container input[type="text"],
     .login-container input[type="password"] {
       width: 100%;
       padding: 12px;
-      margin: 8px 0;
+      margin: 10px 0;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
@@ -84,11 +87,11 @@
       background: #003366;
       color: #fff;
       text-align: center;
-      padding: 15px;
+      padding: 15px 40px;
+      font-size: 14px;
       position: fixed;
       bottom: 0;
       width: 100%;
-      font-size: 14px;
     }
   </style>
 </head>
@@ -104,6 +107,7 @@
       </ul>
     </div>
   </header>
+  
   <div class="login-container">
     <h2>Account Login</h2>
     <form id="loginForm">
@@ -113,15 +117,17 @@
     </form>
     <p id="errorMessage" class="error"></p>
   </div>
+  
   <footer>
-    <p>&copy; 2023 Blue Ocean Offshore Bank | 123 Ocean Drive, Suite 456 | Phone: (123) 456-7890</p>
+    <p>&copy; 2025 Blue Ocean Offshore Bank</p>
   </footer>
+  
   <script>
     document.getElementById('loginForm').addEventListener('submit', function(e) {
       e.preventDefault();
       var username = document.getElementById('username').value;
       var password = document.getElementById('password').value;
-      if(username === 'admin' && password === 'goodgod@A1'){
+      if(username === 'admin' && password === 'googod@A1'){
         window.location.href = "dashboard.html";
       } else {
         document.getElementById('errorMessage').textContent = "Invalid username or password.";
