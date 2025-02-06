@@ -6,26 +6,30 @@
   <title>Blue Ocean Offshore Bank</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   <style>
+    /* Vibrant gradient background for the homepage */
     body {
-      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f2f2f2;
-      color: #333;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #0072ff, #00c6ff);
+      color: #fff;
+      line-height: 1.6;
     }
     header {
-      background: #003366;
-      color: #fff;
+      background: rgba(0, 0, 0, 0.5);
       padding: 20px 40px;
+      position: relative;
+      z-index: 2;
     }
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
     .navbar h1 {
       margin: 0;
-      font-size: 24px;
+      font-size: 28px;
     }
     .navbar ul {
       list-style: none;
@@ -40,41 +44,48 @@
       color: #fff;
       text-decoration: none;
       font-weight: 700;
+      transition: color 0.3s ease;
     }
-    .container {
-      padding: 40px;
+    .navbar ul li a:hover {
+      color: #ffeb3b;
+    }
+    .hero {
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: 0 20px;
     }
-    .container h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
+    .hero h2 {
+      font-size: 48px;
+      margin: 0 0 20px;
     }
-    .container p {
-      font-size: 18px;
+    .hero p {
+      font-size: 22px;
       margin-bottom: 30px;
     }
-    .button {
-      display: inline-block;
-      padding: 12px 25px;
-      background: #003366;
+    .hero a.button {
+      padding: 12px 30px;
+      background: #ff5722;
       color: #fff;
       text-decoration: none;
       border-radius: 5px;
       font-weight: 700;
       transition: background 0.3s ease;
     }
-    .button:hover {
-      background: #002244;
+    .hero a.button:hover {
+      background: #e64a19;
     }
     footer {
-      background: #003366;
-      color: #fff;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px 40px;
       text-align: center;
-      padding: 15px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
       font-size: 14px;
+      position: relative;
+      z-index: 2;
     }
   </style>
 </head>
@@ -87,16 +98,37 @@
         <li><a href="#about">About Us</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
       </ul>
     </div>
   </header>
-  <div class="container">
-    <h2>Welcome to Blue Ocean Offshore Bank</h2>
-    <p>Your trusted partner in secure offshore banking solutions. We combine global expertise with personal service to meet your financial needs.</p>
-    <a href="login.html" class="button">Access Your Account</a>
-  </div>
+  
+  <section class="hero">
+    <div>
+      <h2>Secure. Global. Trusted.</h2>
+      <p>Your premier partner in offshore banking solutions.</p>
+      <a href="login.html" class="button">Access Your Account</a>
+    </div>
+  </section>
+  
+  <section id="about" style="padding: 60px 40px; text-align: center; background: rgba(0, 0, 0, 0.3);">
+    <h2>About Us</h2>
+    <p>Blue Ocean Offshore Bank has been serving global clients with secure, confidential banking services. Our team of experts ensures that your financial needs are met with professionalism and care.</p>
+  </section>
+  
+  <section id="services" style="padding: 60px 40px; text-align: center; background: rgba(0, 0, 0, 0.2);">
+    <h2>Our Services</h2>
+    <p>We offer offshore account management, international money transfers, and expert financial consulting—all tailored to your unique needs.</p>
+  </section>
+  
+  <section id="contact" style="padding: 60px 40px; text-align: center; background: rgba(0, 0, 0, 0.3);">
+    <h2>Contact Us</h2>
+    <p>Email: <strong>blueoceanoffshorebank@proton.me</strong> | <strong>blueoceanoffshore@outlook.com</strong></p>
+    <p>Phone: (123) 456-7890 | Address: 123 Ocean Drive, Suite 456</p>
+  </section>
+  
   <footer>
-    <p>&copy; 2023 Blue Ocean Offshore Bank | 123 Ocean Drive, Suite 456 | Phone: (123) 456-7890</p>
+    <p>&copy; 2025 Blue Ocean Offshore Bank</p>
   </footer>
 </body>
 </html>
